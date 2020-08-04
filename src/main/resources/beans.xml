@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="false">
+    <bean id="student" class="cn.ihna.demo.spring.beans.Student" scope="singleton">
+        <property name="age" value="18"/>
+        <property name="name" value="lxy"/>
+    </bean>
+
+    <context:component-scan base-package="cn.ihna.demo.spring.beans"/>
+
+</beans>
