@@ -1,5 +1,6 @@
 package cn.ihna.demo.spring.bootstrap;
 
+import cn.ihna.demo.spring.beans.Cleaner;
 import cn.ihna.demo.spring.beans.Student;
 import cn.ihna.demo.spring.beans.Teacher;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -17,5 +18,7 @@ public class BootstrapFromXml {
         System.out.println("student = " + student);
         Teacher teacher = applicationContext.getBean("teacher", Teacher.class);
         teacher.teach();
+        Cleaner cleaner = applicationContext.getBean(Cleaner.class);
+        System.out.println(cleaner);
     }
 }

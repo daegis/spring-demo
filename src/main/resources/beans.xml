@@ -11,6 +11,10 @@
         <property name="name" value="lxy"/>
     </bean>
 
+    <bean id="cleanerFactory" class="cn.ihna.demo.spring.beans.CleanerFactory"/>
+
+    <bean id="cleaner" class="cn.ihna.demo.spring.beans.Cleaner" factory-bean="cleanerFactory" factory-method="getCleaner"/>
+
     <context:component-scan base-package="cn.ihna.demo.spring.beans"/>
 
 </beans>
