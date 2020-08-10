@@ -16,7 +16,7 @@ public class AnnotationConfig {
     public Student student() {
         Student student = new Student();
         student.setAge(20);
-        student.setName("lxx");
+        student.setName("annotation");
         return student;
     }
 }
